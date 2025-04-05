@@ -9,6 +9,7 @@ class MemoryNode(MemoryNodeInterface):
         self.children: List[MemoryNodeInterface] = []
         self.parents: List[MemoryNodeInterface] = []
         self.id = hash((data, self.label))
+        self.version = 1
 
     def compress(self) -> Dict:
         return {
@@ -21,7 +22,9 @@ class MemoryNode(MemoryNodeInterface):
         }
 
     def reflect(self) -> 'MemoryNode':
-        return MemoryNode(data=self.data, entropy_val=-self._entropy, label=f"reflection_of_{self.label}")
+        # Increment version on mutation
+        new_label = f"{self.label}.v{len(self.children)+1}"
+        return MemoryNode(data=self.data, entropy_val=-self._entropy, label=new_label)
 
     def link_child(self, child: 'MemoryNodeInterface') -> None:
         self.children.append(child)
