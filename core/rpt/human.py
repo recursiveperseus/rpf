@@ -15,3 +15,6 @@ class Human:
     def boot_self_reflection(self):
         print("🧠 Human initialized: Recursive Mind ↔ Body loop active.")
 
+    def get_memory(self):
+        return self.__mind.get_memory()
+

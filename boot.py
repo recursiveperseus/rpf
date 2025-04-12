@@ -32,6 +32,14 @@ def main():
     human = Human()
     human.boot_self_reflection()
 
+    # 🧠 Test memory storage and reflection
+    print("\n🧠 Storing memories in human's mind...")
+    human.get_memory().store("First stimulus", importance=0.4)
+    human.get_memory().store("Critical insight", importance=0.9)
+
+    print("🧠 Reflecting...")
+    print(human.get_memory().compress())
+
     print("\n✅ rPF + rPT boot complete. Recursive cycles and cognition initialized.\n")
 
 if __name__ == '__main__':
