@@ -40,6 +40,14 @@ def main():
     print("🧠 Reflecting...")
     print(human.get_memory().compress())
 
+    # 🐾 Stimulate animal instincts
+    print("\n🐾 Stimulating animal instincts...")
+    human.get_animal().stimulate("seek_food")
+    human.get_animal().stimulate("seek_safety")
+    human.get_animal().adapt("Found shelter under tree.")
+
+    print("🧬 Animal State:", human.get_animal().get_state())
+
     print("\n✅ rPF + rPT boot complete. Recursive cycles and cognition initialized.\n")
 
 if __name__ == '__main__':

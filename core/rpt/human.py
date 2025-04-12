@@ -18,3 +18,6 @@ class Human:
     def get_memory(self):
         return self.__mind.get_memory()
 
+    def get_animal(self):
+        return self.__body.get_animal()
+
