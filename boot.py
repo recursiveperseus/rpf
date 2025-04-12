@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from core.memory import MemoryNode
 from core.loop import FeedbackLoop
+from core.rpt.human import Human  # 🧬 rPT kernel import
 
 def main():
     print("\n🚀 Booting rPF: Recursive Processing Framework\n")
@@ -26,7 +27,13 @@ def main():
     loop = FeedbackLoop(seed)
     loop.run(5)
 
-    print("\n✅ rPF boot complete. Recursive cycles executed.\n")
+    # 🧬 Boot rPT Human kernel
+    print("\n🔧 Loading rPT kernel: Mind ↔ Body recursive architecture")
+    human = Human()
+    human.boot_self_reflection()
+
+    print("\n✅ rPF + rPT boot complete. Recursive cycles and cognition initialized.\n")
 
 if __name__ == '__main__':
     main()
+
